@@ -1,0 +1,17 @@
+Here we present some MATLAB code accompanying the paper “Nash Social Distancing Games with Equity Constraints: How Inequality Aversion Affects the Spread of Epidemics”.
+Functions and Scripts
+For a full set of files please download codeNew.zip
+Initialization: Defines the parameters of the model 
+Nash_eq: Finds the unconstrained Nash equilibria 
+script_1: Computes the values of J1 and J2 on a grid of points. Computes also the partial derivatives of J_1,J_2 with respect to u_1 and u_2
+equ_comp: Finds the set of pairs of points (u_1,u_2) that satisfy the conditions of Proposition 4.(iv)
+gk_computation: Computs function g^K_{j\mu_1,mu_2)(u)
+gL_computation: Computs function g^L_{j\mu_1,mu_2)(u)
+find_eq_V_C: Finds a set of GNE under the constraint V<=C, given C
+plotting_costs_wrt_C: Finds a set of GNE under the constraint V<=C, for several C
+drawVfields: Draws the vector fields (see Example 3)
+ode_F_randomizing: The right-hand side of the differential equation of Section 3 (players randomize between u_m and u_M
+odefcn: The right-hand side of the differential equation where all players use deterministic strategies (u_1,u_2)
+odefcn1: The right-hand side of the differential equation where all players use deterministic strategies (u_1,u_2), except some who deviate. It represent the coupled differential equation with the linearized system and the DE of the deviators.
+
+To run an example, begin with Initialization.m, giving the desired parameters. This will provide also the Nash equilibrium of the unconstrained game. Then, run script_1.m and equ_comp.m to find the points where condition (iv) of Proposition 4 is satisfied. For given C, run find_eq_V_C.m to find the set of GNE. Finally, run plotting_costs_wrt_C.m to find the GNE, for several C. This script also computes the optimal GNE, for each given C and the bargaining solution. 
